@@ -475,6 +475,7 @@ def start(host, tlsport, port):
     logger.info(
         'Starting Cloud Registrar Server on ports %s and %s (TLS) use <Ctrl-C> to stop' % (port, tlsport))
     for thread in threads:
+        logger.info("starting thread")
         thread.start()
 
     def signal_handler(signum, frame):
